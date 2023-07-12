@@ -1,0 +1,9 @@
+version: "3"
+services:
+  proxy:
+    image: ubuntu/squid
+    ports:
+      - "28080:3128"
+    volumes:
+      - ./squid.conf.noauth:/etc/squid/squid.conf
+    restart: always
